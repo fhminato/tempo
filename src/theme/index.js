@@ -1,13 +1,35 @@
-import {DefaultTheme} from 'react-native-paper';
+import {DefaultTheme, configureFonts} from 'react-native-paper';
+
+const fontConfig = {
+  default: {
+    regular: {
+      fontFamily: 'built-titling-rg',
+      fontWeight: 'normal',
+    },
+    medium: {
+      fontFamily: 'built-titling-bd',
+      fontWeight: 'normal',
+    },
+    light: {
+      fontFamily: 'built-titling-lt',
+      fontWeight: 'normal',
+    },
+    thin: {
+      fontFamily: 'built-titling-el',
+      fontWeight: 'normal',
+    },
+  },
+};
 
 export default appTheme = {
   ...DefaultTheme,
   colors: {
-    primary: '#00A18F',
-    primaryDark: '#028f81',
-    accent: '#FFA000',
+    day: '#1167b1',
+    night: '#753bbd',
+    evening: '#FFA000',
     backgroundPage: '#fff',
     background: '#fff',
-    navText: '#fff',
+    text: '#fff',
   },
+  fonts: configureFonts(fontConfig),
 };

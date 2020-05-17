@@ -12,6 +12,7 @@ const StackRouter = createStackNavigator(
       screen: Home,
       navigationOptions: {
         title: 'Home',
+        header: null,
       },
     },
   },
@@ -20,13 +21,6 @@ const StackRouter = createStackNavigator(
   },
 );
 
-const Routes = createAppContainer(
-  createSwitchNavigator(
-    {
-      Home: StackRouter,
-    },
-    {initialRouteName: 'Home'},
-  ),
-);
+const Routes = createAppContainer(StackRouter);
 
 export default Routes;
